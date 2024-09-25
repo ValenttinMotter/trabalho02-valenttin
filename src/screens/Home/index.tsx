@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Header } from "./styles";
+import {
+  Button,
+  Container,
+  Header,
+  InputContainer,
+  MainContainer,
+  PlusIcon,
+  TextInput,
+} from "./styles";
 import { Text } from "./styles";
 
 export const Home = () => {
@@ -8,6 +16,14 @@ export const Home = () => {
       <Header>
         <Text>Lista de Compras</Text>
       </Header>
+      <MainContainer>
+        <InputContainer>
+          <TextInput placeholder="Adicione um novo produto"></TextInput>
+          <Button>
+            <PlusIcon name="pluscircleo" />
+          </Button>
+        </InputContainer>
+      </MainContainer>
     </Container>
   );
 };
