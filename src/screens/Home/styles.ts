@@ -33,6 +33,12 @@ export const InputContainer = styled.View`
   margin-bottom: 32px;
 `;
 
+export const InfoContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+`;
+
 export const TextInput = styled.TextInput`
   height: 54px;
   width: 289px;

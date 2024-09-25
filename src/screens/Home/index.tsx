@@ -1,8 +1,9 @@
-import React from "react";
+import { InfoText } from "../../components/InfoText";
 import {
   Button,
   Container,
   Header,
+  InfoContainer,
   InputContainer,
   MainContainer,
   PlusIcon,
@@ -23,6 +24,10 @@ export const Home = () => {
             <PlusIcon name="pluscircleo" />
           </Button>
         </InputContainer>
+        <InfoContainer>
+          <InfoText text="Produtos" number={0}></InfoText>
+          <InfoText text="Finalizados" number={0}></InfoText>
+        </InfoContainer>
       </MainContainer>
     </Container>
   );
