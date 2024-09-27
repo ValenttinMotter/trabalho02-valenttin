@@ -13,6 +13,7 @@ import {
 } from "./styles";
 import { useState } from "react";
 import { EmptyList } from "../../components/EmptyList";
+import { ProductCard } from "../../components/ProductCard";
 
 export const Home = () => {
   const [products, setProducts] = useState<string[]>(["Teste"]);
@@ -36,7 +37,12 @@ export const Home = () => {
           <InfoText text="Produtos" number={products.length}></InfoText>
           <InfoText text="Finalizados" number={0}></InfoText>
         </InfoContainer>
-        <EmptyList />
+        <ProductCard
+          name="5 maças"
+          isDone={false}
+          onDone={() => console.log()}
+          onRemove={() => console.log}
+        />
       </MainContainer>
     </Container>
   );
