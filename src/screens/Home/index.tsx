@@ -1,3 +1,4 @@
+import { FlatList } from "react-native";
 import { InfoText } from "../../components/InfoText";
 import {
   Button,
@@ -7,27 +8,35 @@ import {
   InputContainer,
   MainContainer,
   PlusIcon,
+  TextHeader,
   TextInput,
 } from "./styles";
-import { Text } from "./styles";
+import { useState } from "react";
+import { EmptyList } from "../../components/EmptyList";
 
 export const Home = () => {
+  const [products, setProducts] = useState<string[]>(["Teste"]);
+
   return (
     <Container>
       <Header>
-        <Text>Lista de Compras</Text>
+        <TextHeader>Lista de Compras</TextHeader>
       </Header>
       <MainContainer>
         <InputContainer>
-          <TextInput placeholder="Adicione um novo produto"></TextInput>
+          <TextInput
+            placeholder="Adicione um novo produto"
+            placeholderTextColor={"#808080"}
+          ></TextInput>
           <Button>
             <PlusIcon name="pluscircleo" />
           </Button>
         </InputContainer>
         <InfoContainer>
-          <InfoText text="Produtos" number={0}></InfoText>
+          <InfoText text="Produtos" number={products.length}></InfoText>
           <InfoText text="Finalizados" number={0}></InfoText>
         </InfoContainer>
+        <EmptyList />
       </MainContainer>
     </Container>
   );

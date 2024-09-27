@@ -11,7 +11,6 @@ export const Container = styled.View`
 
 export const Text = styled.Text<TextProps>`
   font-size: 14px;
-  font-weight: 700;
   font-family: Inter_700Bold;
   margin-right: 8px;
   ${({ text }) =>

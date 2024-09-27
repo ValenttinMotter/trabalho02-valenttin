@@ -13,10 +13,9 @@ export const Header = styled.View`
   align-items: center;
 `;
 
-export const Text = styled.Text`
+export const TextHeader = styled.Text`
   color: #f2f2f2;
   font-size: 18px;
-  font-weight: 700;
   font-family: Inter_700Bold;
 `;
 
@@ -24,11 +23,11 @@ export const MainContainer = styled.View`
   flex: 1;
   background-color: #f2f2f2;
   padding: 0 24px 0 24px;
-  position: relative;
 `;
 
 export const InputContainer = styled.View`
   flex-direction: row;
+  position: relative;
   top: -27px;
   margin-bottom: 32px;
 `;

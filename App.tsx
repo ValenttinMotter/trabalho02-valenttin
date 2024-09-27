@@ -1,14 +1,15 @@
-import { StatusBar, StyleSheet } from "react-native";
+import { Image, StatusBar, StyleSheet } from "react-native";
 import { View } from "react-native";
 import { Home } from "./src/screens/Home";
 import {
-  Inter_400Regular,
   Inter_700Bold,
+  Inter_400Regular,
   useFonts,
 } from "@expo-google-fonts/inter";
+import { Loading } from "./src/components/Loading";
 
 export default function App() {
-  const [fontsLoaded] = useFonts({ Inter_700Bold, Inter_400Regular });
+  const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_700Bold });
 
   return (
     <View style={styles.container}>
@@ -17,7 +18,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Home />
+      {fontsLoaded ? <Home /> : <Loading />}
     </View>
   );
 }
