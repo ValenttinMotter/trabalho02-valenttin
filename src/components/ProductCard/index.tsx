@@ -1,3 +1,4 @@
+import { TouchableOpacity } from "react-native";
 import {
   Checked,
   Container,
@@ -20,11 +21,13 @@ export const ProductCard = ({ name, isDone, onDone, onRemove }: Props) => {
   return (
     <Container isDone={isDone}>
       <Wrapper>
-        {isDone ? (
-          <Checked name="checkbox-marked-circle" />
-        ) : (
-          <NotChecked name="checkbox-blank-circle-outline" />
-        )}
+        <TouchableOpacity onPress={onDone}>
+          {isDone ? (
+            <Checked name="checkbox-marked-circle" />
+          ) : (
+            <NotChecked name="checkbox-blank-circle-outline" />
+          )}
+        </TouchableOpacity>
         <ProductName isDone={isDone}>{name}</ProductName>
       </Wrapper>
       <DeleteButton onPress={onRemove}>

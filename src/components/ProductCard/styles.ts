@@ -20,6 +20,7 @@ export const Container = styled.View<ProductCardProps>`
       : css`
           border: 1px solid #808080;
         `};
+  margin-bottom: 8px;
 `;
 
 export const Wrapper = styled.View`
